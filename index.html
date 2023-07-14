@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>School cloth design</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>School shirt designer</h1>
+      </header>
+
+      <main>
+        <div class="left">
+          <div id="front">
+            <p>Front</p>
+          </div>
+          <div id="back">
+            <p>Back</p>
+          </div>
+        </div>
+
+        <div class="right">
+          <!-- Collar Type -->
+          <div>
+            <p>Choose type of T-shirt</p>
+            <input
+              type="radio"
+              id="collar"
+              name="collar"
+              value="0"
+              onchange="SelectShirt('COLLAR')"
+            />
+            <label for="collar">Collar</label>
+            <input
+              type="radio"
+              id="no-collar"
+              name="collar"
+              value="1"
+              onchange="SelectShirt('NOCOLLAR')"
+            />
+            <label for="no-collar">No Collar</label>
+          </div>
+
+          <!-- Shirt Color -->
+          <div>
+            <p>Choose color of shirt</p>
+            <select name="shirt-color" id="shirt-color" onchange="SelectShirtColor()">
+              <option value="" selected disabled>Choose color</option>
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+            </select>
+          </div>
+
+          <!-- Sleev Color -->
+          <div>
+            <p>Choose color of sleeve</p>
+            <select name="sleeve-color" id="sleeve-color" onchange="SelectSleeveColor()">
+              <option value="" selected disabled>Choose color</option>
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+            </select>
+          </div>
+
+          <!-- Collar Color -->
+          <div>
+            <p>Choose color of collar</p>
+            <select name="collar-color" id="collar-color" onchange="SelectCollarColor()">
+              <option value="" selected disabled>Choose color</option>
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+            </select>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div>
+          <label for="sizes">Choose size</label>
+          <select name="sizes" id="sizes">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="units">Choose quantity</label>
+          <select name="units" id="units">
+            <option value="10">10</option>
+            <option value="100">100</option>
+            <option value="500">500</option>
+          </select>
+        </div>
+
+        <div>
+          <button class="button" id="order" onclick="Order()">Order</button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/d3.v7.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
